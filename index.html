@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Flashcards</title>
+    <style>
+      /* Estilos gerais para o layout */
+      .flashcard-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 16px;
+      }
+
+      /* Estilos para o flip card */
+      .flashcard {
+        width: 30%;
+        perspective: 1000px; /* Necessário para o efeito 3D */
+        margin-bottom: 20px; /* Espaçamento entre as linhas de cards */
+      }
+
+      .flashcard-inner {
+        position: relative;
+        width: 100%;
+        height: 200px; /* Altura dos cards */
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .flashcard:hover .flashcard-inner {
+        transform: rotateY(180deg);
+      }
+
+      .flashcard-front,
+      .flashcard-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden; /* Para Safari */
+        backface-visibility: hidden;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+      }
+
+      .flashcard-front {
+        background-color: #fff;
+        color: #333;
+      }
+
+      .flashcard-back {
+        background-color: #4caf50;
+        color: #fff;
+        transform: rotateY(180deg);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="flashcard-container">
+      <!-- Card 1 -->
+      <div class="flashcard">
+        <div class="flashcard-inner">
+          <div class="flashcard-front">
+            <h3>Card 1</h3>
+            <p>Conteúdo do card 1</p>
+          </div>
+          <div class="flashcard-back">
+            <h3>Verso 1</h3>
+            <p>Conteúdo alternativo</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="flashcard">
+        <div class="flashcard-inner">
+          <div class="flashcard-front">
+            <h3>Card 2</h3>
+            <p>Conteúdo do card 2</p>
+          </div>
+          <div class="flashcard-back">
+            <h3>Verso 2</h3>
+            <p>Conteúdo alternativo</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="flashcard">
+        <div class="flashcard-inner">
+          <div class="flashcard-front">
+            <h3>Card 3</h3>
+            <p>Conteúdo do card 3</p>
+          </div>
+          <div class="flashcard-back">
+            <h3>Verso 3</h3>
+            <p>Conteúdo alternativo</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="flashcard">
+        <div class="flashcard-inner">
+          <div class="flashcard-front">
+            <h3>Card 4</h3>
+            <p>Conteúdo do card 4</p>
+          </div>
+          <div class="flashcard-back">
+            <h3>Verso 4</h3>
+            <p>Conteúdo alternativo</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="flashcard">
+        <div class="flashcard-inner">
+          <div class="flashcard-front">
+            <h3>Card 5</h3>
+            <p>Conteúdo do card 5</p>
+          </div>
+          <div class="flashcard-back">
+            <h3>Verso 5</h3>
+            <p>Conteúdo alternativo</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="flashcard">
+        <div class="flashcard-inner">
+          <div class="flashcard-front">
+            <h3>Card 6</h3>
+            <p>Conteúdo do card 6</p>
+          </div>
+          <div class="flashcard-back">
+            <h3>Verso 6</h3>
+            <p>Conteúdo alternativo</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
